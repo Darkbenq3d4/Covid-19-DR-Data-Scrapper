@@ -3,17 +3,8 @@ const firebase = require('firebase/app');
 const { database } = require('firebase/app');
 require('firebase/database');
 require('firebase/auth');
-const firebaseConfig = {
-  apiKey: "AIzaSyDP-Yrac_ALqTq49siuRa_Uco4CGJLQ1OI",
-  authDomain: "eagle-bot-cebypg.firebaseapp.com",
-  databaseURL: "https://eagle-bot-cebypg.firebaseio.com",
-  projectId: "eagle-bot-cebypg",
-  storageBucket: "eagle-bot-cebypg.appspot.com",
-  messagingSenderId: "1087218450759",
-  appId: "1:1087218450759:web:beaee678d48b249d43cc62",
-  measurementId: "G-JS2G0GJ9XP"
-}
-firebase.initializeApp(firebaseConfig);
+let env = require('./env');
+firebase.initializeApp(env.firebaseConfig);
 var DB = firebase.database();
 var Auth = firebase.auth();
 async function scrapeShit(url){
