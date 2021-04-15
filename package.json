@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "check": "ts-node scrapper.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +15,9 @@
     "firebase": "^7.20.0",
     "fs": "0.0.1-security",
     "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "ts-node": "^9.1.1"
   }
 }
